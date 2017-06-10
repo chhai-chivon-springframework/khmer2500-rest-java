@@ -1,4 +1,4 @@
-package com.khmer2500.repositories.imp;
+package com.khmer2500.rest.repositories.imp;
 
 import java.util.List;
 
@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Repository;
 
-import com.khmer2500.entities.User;
-import com.khmer2500.entities.UserRole;
-import com.khmer2500.repositories.UserRepo;
+import com.khmer2500.rest.entities.User;
+import com.khmer2500.rest.entities.UserRole;
+import com.khmer2500.rest.repositories.UserRepo;
 
 
 @Repository

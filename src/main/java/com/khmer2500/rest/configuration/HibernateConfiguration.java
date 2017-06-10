@@ -1,4 +1,4 @@
-package com.khmer2500.configuration;
+package com.khmer2500.rest.configuration;
 
 import java.util.Properties;
 import javax.sql.DataSource;

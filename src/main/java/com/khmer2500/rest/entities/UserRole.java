@@ -1,4 +1,4 @@
-package com.khmer2500.entities;
+package com.khmer2500.rest.entities;
 
 import java.io.Serializable;
 
@@ -11,7 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.khmer2500.enums.UserRoleType;
+import com.khmer2500.rest.enums.UserRoleType;
 
 @Entity
 @Table(name ="USER_ROLES")
