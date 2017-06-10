@@ -1,4 +1,4 @@
-package com.khmer2500.controllers;
+package com.khmer2500.rest.controllers;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.khmer2500.api.ResponseApi;
+import com.khmer2500.rest.api.ResponseApi;
 import com.khmer2500.rest.entities.User;
 import com.khmer2500.rest.services.UserService;
 

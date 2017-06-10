@@ -1,4 +1,4 @@
-package com.khmer2500.api;
+package com.khmer2500.rest.api;
 
 import java.util.List;
 import java.util.Map;
