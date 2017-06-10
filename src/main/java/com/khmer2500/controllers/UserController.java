@@ -25,7 +25,7 @@ public class UserController extends ResponseApi {
 	
 	Map<String, Object>  map = new HashMap<>();
 	
-	@RequestMapping(value = "/find-user-username/{username}")
+	/*@RequestMapping(value = "/find-user-username/{username}")
 	public ResponseEntity<Map<String, Object>> findUserByUsername(@PathVariable("username") String username){
 		List<User> listUsers = new ArrayList<>();
 		 if((userService.findUserByUsername(username)) != null){
@@ -79,7 +79,7 @@ public class UserController extends ResponseApi {
 			 map.put("MESSAGE", "FAIL");
 		 }
 		return new ResponseEntity<Map<String,Object>>(map, HttpStatus.OK);
-	}
+	}*/
 	
 	
 	
