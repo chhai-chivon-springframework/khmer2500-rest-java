@@ -1,12 +1,13 @@
-package com.khmer2500.rest.repositories;
+package com.khmer2500.services;
 
 import java.util.List;
 
 import com.khmer2500.rest.entities.User;
 import com.khmer2500.rest.entities.UserRole;
 
-public interface UserRepo {
-	public User findUserById(Long id);
+
+public interface UserService {
+public User findUserById(Long id);
 	
 	public User findUserByUsername(String username);
 	
