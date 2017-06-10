@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.khmer2500.rest.api.ResponseApi;
 import com.khmer2500.rest.entities.User;
+import com.khmer2500.rest.services.UserService;
 
 
 @Controller
