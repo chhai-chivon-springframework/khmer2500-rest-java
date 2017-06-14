@@ -1,4 +1,4 @@
-package com.khmer2500;
+package com.khmer2500.rest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

@@ -1,4 +1,4 @@
-package com.khmer2500;
+package com.khmer2500.rest;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;

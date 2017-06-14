@@ -1,4 +1,4 @@
-package com.khmer2500.controllers;
+package com.khmer2500.rest.controllers;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,9 +12,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.khmer2500.api.ResponseApi;
-import com.khmer2500.entities.User;
-import com.khmer2500.services.UserService;
+import com.khmer2500.rest.api.ResponseApi;
+import com.khmer2500.rest.entities.User;
+import com.khmer2500.rest.services.UserService;
+
 
 @Controller
 @RequestMapping(value = "/api/users")
@@ -25,7 +26,7 @@ public class UserController extends ResponseApi {
 	
 	Map<String, Object>  map = new HashMap<>();
 	
-	@RequestMapping(value = "/find-user-username/{username}")
+	/*@RequestMapping(value = "/find-user-username/{username}")
 	public ResponseEntity<Map<String, Object>> findUserByUsername(@PathVariable("username") String username){
 		List<User> listUsers = new ArrayList<>();
 		 if((userService.findUserByUsername(username)) != null){
@@ -79,7 +80,7 @@ public class UserController extends ResponseApi {
 			 map.put("MESSAGE", "FAIL");
 		 }
 		return new ResponseEntity<Map<String,Object>>(map, HttpStatus.OK);
-	}
+	}*/
 	
 	
 	

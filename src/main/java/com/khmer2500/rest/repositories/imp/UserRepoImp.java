@@ -1,4 +1,4 @@
-package com.khmer2500.repositories.imp;
+package com.khmer2500.rest.repositories.imp;
 
 import java.util.Date;
 import java.util.HashSet;
@@ -12,10 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.khmer2500.entities.User;
-import com.khmer2500.entities.UserRole;
-import com.khmer2500.repositories.UserRepo;
-import com.khmer2500.enums.Status;
+import com.khmer2500.rest.entities.User;
+import com.khmer2500.rest.entities.UserRole;
+import com.khmer2500.rest.repositories.UserRepo;
+
 
 @Repository
 @Transactional

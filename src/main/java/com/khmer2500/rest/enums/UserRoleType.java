@@ -1,4 +1,4 @@
-package com.khmer2500.enums;
+package com.khmer2500.rest.enums;
 
 public enum UserRoleType {
 	CUSTOMER,

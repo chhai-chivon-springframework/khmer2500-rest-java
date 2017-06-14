@@ -1,14 +1,14 @@
-package com.khmer2500.services.imp;
+package com.khmer2500.rest.services.imp;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.khmer2500.entities.User;
-import com.khmer2500.entities.UserRole;
-import com.khmer2500.repositories.UserRepo;
-import com.khmer2500.services.UserService;
+import com.khmer2500.rest.entities.User;
+import com.khmer2500.rest.entities.UserRole;
+import com.khmer2500.rest.repositories.UserRepo;
+import com.khmer2500.rest.services.UserService;
 
 @Service
 public class UserServiceImp implements UserService{

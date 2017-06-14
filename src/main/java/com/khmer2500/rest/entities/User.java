@@ -1,4 +1,4 @@
-package com.khmer2500.entities;
+package com.khmer2500.rest.entities;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -21,7 +21,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.khmer2500.enums.Status;
+import com.khmer2500.rest.enums.Status;
 
 @Entity
 @Table(name ="USERS")
