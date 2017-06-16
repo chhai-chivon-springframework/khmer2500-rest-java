@@ -46,11 +46,14 @@ public class CategoryController extends ResponseApi {
 					map.put("PAGE", pagination.getPage());
 					map.put("LIMIT", pagination.getLimit());
 				}else{
+					map.put("DATA","NOT FOUND");
 					map.put("STATUS", false);
 					map.put("MESSAGE", "FAIL");
 				}
 			} catch (Exception e) {
 				e.printStackTrace();
+				map.put("STATUS", false);
+				map.put("MESSAGE", "FAIL");
 			}
 		return new ResponseEntity<Map<String,Object>>(map,HttpStatus.OK);
 	}
