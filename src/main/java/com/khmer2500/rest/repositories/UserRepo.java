@@ -7,7 +7,7 @@ import com.khmer2500.rest.entities.User;
 
 public interface UserRepo {
 	public User findUserById(Long id);
-	public User findUserByName(String name);
+	public User findUserByName(String username);
 	public User finduserByEmail(String email);
 	public Boolean saveUser(User user);
 	public Boolean updateUser(User user);

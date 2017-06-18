@@ -39,7 +39,7 @@ public class CategoryController extends ResponseApi {
 			pagination.setPage(page);
 			pagination.setLimit(limit);
 			try {
-				if(!(categoryService.getAllCategories(pagination).isEmpty())){
+				if((categoryService.getAllCategories(pagination) != null)){
 					map.put("DATA", categoryService.getAllCategories(pagination));
 					map.put("STATUS", true);
 					map.put("MESSAGE", "SUCCESS");

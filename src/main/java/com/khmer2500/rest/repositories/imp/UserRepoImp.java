@@ -16,7 +16,6 @@ import com.khmer2500.rest.repositories.UserRepo;
 
 
 @Repository
-@Transactional
 public class UserRepoImp implements UserRepo{
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -34,9 +33,9 @@ public class UserRepoImp implements UserRepo{
 
 	@Override
 	@Transactional
-	public User findUserByName(String name) {
+	public User findUserByName(String username) {
 		try {
-			return (User) sessionFactory.getCurrentSession().createCriteria(User.class,"user") .add(Restrictions.eq("user.name",name)).uniqueResult();
+			return (User) sessionFactory.getCurrentSession().createCriteria(User.class,"user") .add(Restrictions.eq("user.username",username)).uniqueResult();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

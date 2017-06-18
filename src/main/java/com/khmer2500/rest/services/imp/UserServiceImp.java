@@ -7,55 +7,48 @@ import org.springframework.stereotype.Service;
 
 import com.khmer2500.rest.entities.Pagination;
 import com.khmer2500.rest.entities.User;
-import com.khmer2500.rest.entities.UserRole;
 import com.khmer2500.rest.repositories.UserRepo;
 import com.khmer2500.rest.services.UserService;
 
 @Service
 public class UserServiceImp implements UserService{
 
+	@Autowired 
+	private UserRepo  userRepo;
+	
 	@Override
 	public User findUserById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return userRepo.findUserById(id);
 	}
 
 	@Override
-	public User findUserByName(String name) {
-		// TODO Auto-generated method stub
-		return null;
+	public User findUserByName(String username) {
+		return userRepo.findUserByName(username);
 	}
 
 	@Override
-	public User finduserByEmail(String email) {
-		// TODO Auto-generated method stub
-		return null;
+	public User findUserByEmail(String email) {
+		return userRepo.finduserByEmail(email);
 	}
 
 	@Override
 	public Boolean saveUser(User user) {
-		// TODO Auto-generated method stub
-		return null;
+		return userRepo.saveUser(user);
 	}
 
 	@Override
 	public Boolean updateUser(User user) {
-		// TODO Auto-generated method stub
-		return null;
+		return userRepo.updateUser(user);
 	}
 
 	@Override
 	public Boolean deleteUser(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return userRepo.deleteUser(id);
 	}
 
 	@Override
 	public List<User> getAllUsers(Pagination pagination) {
-		// TODO Auto-generated method stub
-		return null;
+		return userRepo.getAllUsers(pagination);
 	}
-
-
 
 }

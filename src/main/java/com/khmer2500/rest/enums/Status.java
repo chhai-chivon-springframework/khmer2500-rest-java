@@ -15,4 +15,5 @@ public enum Status {
 	public void setState(final String state) {
 		this.state = state;
 	}
+	
 }

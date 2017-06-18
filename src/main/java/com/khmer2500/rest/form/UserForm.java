@@ -1,44 +1,32 @@
-package com.khmer2500.rest.entities;
+package com.khmer2500.rest.form;
+
+import java.io.Serializable;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name ="tb_user")
-public class User{
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id")
-	private Long id;
-	
-	@Column(name="USERNAME", unique=true, nullable=false)
+public class UserForm implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@JsonProperty("USERNAME")
 	private String username;
 	
-	@Column(name="PASSWORD", nullable=false)
+	@JsonProperty("PASSWORD")
 	private String password;
 	
-	@Column(name="FIRSTNAME", nullable=false)
+	@JsonProperty("FIRSTNAME")
 	private String firstName;
 	
-	@Column(name="LASTNAME", nullable=false)
+	@JsonProperty("LASTNAME")
 	private String lastName;
 	
-	@Column(name="EMAIL", nullable=false, unique=true)
+	@JsonProperty("EMAIL")
 	private String email;
-	
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public String getUsername() {
 		return username;
@@ -80,4 +68,10 @@ public class User{
 		this.email = email;
 	}
 
+	@Override
+	public String toString() {
+		return "UserForm [username=" + username + ", password=" + password + ", firstName=" + firstName + ", lastName="
+				+ lastName + ", email=" + email + "]";
+	}
+	
 }

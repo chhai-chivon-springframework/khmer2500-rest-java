@@ -4,6 +4,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import com.khmer2500.rest.entities.Category;
+import com.khmer2500.rest.entities.User;
 
 
 public class HibernateUtil {
@@ -28,6 +29,7 @@ public class HibernateUtil {
 		try{
 			Configuration configuration = new Configuration();
 			configuration.addAnnotatedClass(Category.class);
+			configuration.addAnnotatedClass(User.class);
 			
 			//configuration.addPackage("com.khmer2500.rest.entities");
 			return configuration.buildSessionFactory(new StandardServiceRegistryBuilder().build());
