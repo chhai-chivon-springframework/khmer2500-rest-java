@@ -2,12 +2,7 @@ package com.khmer2500.rest.entities;
 
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "tb_category")
@@ -17,11 +12,11 @@ public class Category {
 	private String name;
 	private String description;
 	private Date date;
-	
+	private User user;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "con_act_sch_id", unique = true, nullable = false)
+	@Column(name = "tb_cat_id", unique = true, nullable = false)
 	public Long getId() {
 		return id;
 	}
@@ -34,7 +29,6 @@ public class Category {
 	public String getName() {
 		return name;
 	}
-
 
 	public void setName(String name) {
 		this.name = name;
@@ -55,8 +49,17 @@ public class Category {
 		return date;
 	}
 
-
 	public void setDate(Date date) {
 		this.date = date;
+	}
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "tb_user_id")
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 }

@@ -17,6 +17,8 @@ public class CategoryForm implements Serializable{
 	private String description;
 	@JsonProperty("DATE")
 	private Date date;
+	@JsonProperty("USER")
+	private Long userId;
 	public String getName() {
 		return name;
 	}
@@ -34,5 +36,12 @@ public class CategoryForm implements Serializable{
 	}
 	public void setDate(Date date) {
 		this.date = date;
+	}
+
+	public long getId() {
+		return userId;
+	}
+	public void setId(Long userId) {
+		this.userId= userId;
 	}
 }

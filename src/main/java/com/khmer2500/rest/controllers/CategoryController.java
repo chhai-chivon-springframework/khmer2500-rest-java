@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.khmer2500.rest.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +29,8 @@ public class CategoryController extends ResponseApi {
 	
 	@Autowired
 	private CategoryService categoryService;
+	@Autowired
+	private UserService  userService;
 	
 	@RequestMapping(value="/get-all-category", method = RequestMethod.GET,headers = "Accept=Application/json")
 	public ResponseEntity<Map<String,Object>> getAllCategory(
